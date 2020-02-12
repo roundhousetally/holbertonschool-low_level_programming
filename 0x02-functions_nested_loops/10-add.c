@@ -3,7 +3,9 @@
 /**
  *add- adds two integers together
  *
- *@c , @d, the two integers to add
+ *@c: first integer
+ *
+ *@d: second integer
  *
  *Return: result
  *
@@ -11,7 +13,7 @@
 int add(int c, int d)
 {
 	int h;
+
 	h = c + d;
-	_putchar(h + '0');
 	return (h);
 }
