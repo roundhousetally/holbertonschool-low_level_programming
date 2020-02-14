@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -8,7 +9,6 @@
  * Return: On success 0.
  * On error, -1 is returned, and errno is set appropriately.
  */
-
 int main(void)
 {
 	int a;
@@ -33,7 +33,7 @@ int main(void)
 		}
 		else
 			printf("%d", a);
-
 	}
 	printf("\n");
+	return (0);
 }
