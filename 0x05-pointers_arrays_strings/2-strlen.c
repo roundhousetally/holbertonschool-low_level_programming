@@ -11,12 +11,12 @@
  */
 int _strlen(char *s)
 {
-	int i;
+	int length;
 
-	for (i = 0; (s[i] != '\0'); i++)
+	while (*s != '\0')
 	{
-		_putchar(i);
+		length++;
+		s++;
 	}
-
-	return (0);
+	return (length);
 }
