@@ -2,32 +2,30 @@
 
 
 /**
- *puts_half - prints the second half of a string
+ * _strlen - length of a string
+ *@s: the string
  *
- *@n: the half of a string
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-/**
- *_strlen - calculates the length of a string
- *
- *@s: the string to be counted
  *
  * Return: the length of the string
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _strlen(char *s)
 {
-	int length;
+	int len;
 
-	while (*s != '\0')
-	{
-		length++;
-		s++;
-	}
-	return (length);
+	for (len = 0; s[len] != '\0'; len++)
+		continue;
+
+	return (len);
 }
+/**
+ *puts_half - prints the second half of a string
+ *
+ *@str: the string
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 void puts_half(char *str)
 {
 	int n;
@@ -45,7 +43,7 @@ void puts_half(char *str)
 
 	else
 	{
-		for (l = ((n / 2)+ 1); l < n; l++)
+		for (l = ((n / 2) + 1); l < n; l++)
 		{
 			_putchar(str[l]);
 		}
