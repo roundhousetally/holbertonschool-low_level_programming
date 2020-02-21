@@ -2,9 +2,9 @@
 
 /**
  *reverse_array- descr
- *
- *
- *Return:
+ *@a: the string to reverse
+ *@len: amount to reverse
+ *Return: void
  *
  */
 void reverse_array(int *a, int len)
