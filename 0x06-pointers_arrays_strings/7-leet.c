@@ -16,18 +16,27 @@ char *leet(char *s)
 	char *o = o;
 	char *t = t;
 	char *l = l;
+	char *A = A;
+	char *E = E;
+	char *O = O;
+	char *T = T;
+	char *L = L;
 
-
-	for(i = 0; i != '\0'; i++)
+	for (i = 0; i != '\0'; i++)
 	{
-		if(s[i] == 'a' || s[i] == 'e' || s[i] == 'o'||
-		   s[i] == 't' || s[i] == 'l')
+		if (s[i] == 'a' || s[i] == 'e' || s[i] == 'o' ||
+		    s[i] == 't' || s[i] == 'l')
 		{
-			*a = 4;
-			*e = 3;
-			*o = 0;
-			*t = 7;
-			*l = 1;
+			*A = *a;
+			*E = *e;
+			*O = *o;
+			*T = *t;
+			*L = *l;
+			*A = 4;
+			*E = 3;
+			*O = 0;
+			*T = 7;
+			*L = 1;
 		}
 	}
 	return (s);
