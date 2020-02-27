@@ -9,4 +9,5 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int _putchar(char c);
+int custpal(char *s, int b, int e);
 #endif /* HOLBERTON_H */
