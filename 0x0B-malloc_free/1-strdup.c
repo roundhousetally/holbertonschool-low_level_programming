@@ -32,4 +32,6 @@ char *_strdup(char *str)
 		t[i] = str[i];
 	}
 	return (t);
+
+	free(t);
 }
