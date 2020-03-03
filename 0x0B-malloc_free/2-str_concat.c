@@ -12,44 +12,18 @@
 int _strlen(char *s);
 char *str_concat(char *s1, char *s2)
 {
-	int is1;
-	int is2;
-	int len1;
-	int len2;
-	int totallen;
-	char *p;
+	char *b, *e, *full;
 
-	len1 = _strlen(s1) - 1;
-	len2 = _strlen(s2);
-	totallen = len1 + len2;
+	full = e = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	if (s1 == NULL || s2 == NULL)
+	for (b = s1; (*e = *b) != '\0'; ++b, ++e)
 	{
-		return (NULL);
 	}
-
-	p = malloc(totallen * sizeof(char));
-
-	if (p == NULL)
+	for (b = s2; (*e = *b) != '\0'; ++b, ++e)
 	{
-		return (NULL);
 	}
-
-	for (is1 = 0; is1 <= len1; is1++)
-	{
-		p[is1] = s1[is1];
-	}
-
-	is1++;
-
-	for (is2 = 0; is2 <= len2; is2++)
-	{
-		p[is1] = s2[is2];
-	}
-	return (p);
+	return (full);
 }
-
-
 
 /**
  *_strlen - calculates the length of a string
