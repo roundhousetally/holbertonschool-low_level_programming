@@ -20,6 +20,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = s2 = "";
 	}
+	if (e == NULL)
+	{
+		return (NULL);
+	}
 	for (b = s1; (*e = *b) != '\0'; ++b, ++e)
 	{
 	}
