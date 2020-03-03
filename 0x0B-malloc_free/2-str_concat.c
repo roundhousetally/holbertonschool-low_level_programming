@@ -16,6 +16,14 @@ char *str_concat(char *s1, char *s2)
 
 	full = e = malloc(_strlen(s1) + _strlen(s2) + 1);
 
+	if (s1 == NULL)
+	{
+		return (NULL);
+	}
+	if (s2 == NULL)
+	{
+		return (NULL);
+	}
 	for (b = s1; (*e = *b) != '\0'; ++b, ++e)
 	{
 	}
