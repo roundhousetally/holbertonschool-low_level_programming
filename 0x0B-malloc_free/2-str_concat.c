@@ -20,13 +20,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = s2 = "";
 	}
-       	for (b = s1; (*e = *b) != '\0'; ++b, ++e)
+	for (b = s1; (*e = *b) != '\0'; ++b, ++e)
 	{
 	}
 	for (b = s2; (*e = *b) != '\0'; ++b, ++e)
 	{
 	}
-	
+
 	return (full);
 }
 
