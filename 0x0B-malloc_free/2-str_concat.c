@@ -14,12 +14,17 @@ char *str_concat(char *s1, char *s2)
 {
 	char *b, *e, *full;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
 	full = e = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		s1 = s2 = "";
-	}
 	if (e == NULL)
 	{
 		return (NULL);
