@@ -43,6 +43,7 @@ char *argstostr(int ac, char **av)
 			*(_all_args + b) = *(*(av + a) + i);
 		}
 
+		*(_all_args + b) = '\n';
 		b++;
 	}
 
