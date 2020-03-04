@@ -1,12 +1,15 @@
 #include "holberton.h"
 #include <stdlib.h>
+
+int _strlen(char *s);
 /**
- *argstostr - concat arguments to the program
+ *argstostr - concat args to a string
  *
  *@ac: arg count
  *@av: args
  *
- *Return: pointer to a string or NULL if it fails
+ *Return: concatted string
+ *
  */
 char *argstostr(int ac, char **av)
 {
@@ -46,4 +49,23 @@ char *argstostr(int ac, char **av)
 	*(_all_args + b) = '\0';
 
 	return (_all_args);
+}
+/**
+ *_strlen - calculates the length of a string
+ *
+ *@s: the string to be counted
+ *
+ * Return: the length of the string
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _strlen(char *s)
+{
+	int length;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
 }
