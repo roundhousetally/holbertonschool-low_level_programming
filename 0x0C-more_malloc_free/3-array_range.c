@@ -11,7 +11,7 @@
 int *array_range(int min, int max)
 {
 	int *arr;
-	int i, combo;
+	int i;
 
 
 	if (min > max)
@@ -26,9 +26,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	combo = max - min + 1;
-
-	for (i = 0; min <= combo; i++, min++)
+	for (i = 0; min <= max; i++, min++)
 	{
 		arr[i] = i;
 	}
