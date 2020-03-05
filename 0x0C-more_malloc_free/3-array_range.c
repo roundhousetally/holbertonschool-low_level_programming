@@ -19,14 +19,14 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	arr = malloc((min + max + 1) * sizeof(int));
+	arr = malloc(((max - min) + 1) * sizeof(int));
 
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
 
-	combo = min + max;
+	combo = max - min + 1;
 
 	for (i = 0; i < combo; i++)
 	{
