@@ -10,7 +10,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	size_t **p;
+	int *p;
 
 
 	if (b == 0)
@@ -29,5 +29,5 @@ void *malloc_checked(unsigned int b)
 	{
 		return (p);
 	}
-	free(p);
+
 }
