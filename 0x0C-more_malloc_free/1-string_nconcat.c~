@@ -3,7 +3,7 @@
 /**
  *string_nconcat - concatenate n bytes of a string
  *
- *@s: string to append to
+ *: string to append to
  *: second string to take n bytes from
  *: amount of bytes to concate
  *
@@ -13,12 +13,10 @@ int _strlen(char *s);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *both;
-	unsigned int k, h;
-	unsigned int size2;
-	unsigned int size;
+	unsigned int i, j, k, h;
 
-	size = _strlen(s1);
-	size2 = _strlen(s2);
+	j = 0;
+	i = 0;
 
 	if (s1 == NULL)
 	{
@@ -28,15 +26,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	if (n >= size2)
+	while (s1[i] != '\0')
 	{
-		both = malloc((size + size2 + 1) * sizeof(char));
-		n = size2;
+		i++;
 	}
-	else
+	while (s2[j] != '\0')
 	{
-		both = malloc((size + n + 1) * sizeof(char));
+		j++;
 	}
+
+	both = malloc(_strlen(s1) + _strlen(s2) + 1);
 
 	if (both == NULL)
 	{
@@ -48,13 +47,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		both[k] = s1[k];
 	}
 
-	for (h = 0; h < n; h++)
+	for (h = 0; h <= n && s2[h] != '\0'; h++)
 	{
 		both[k] = s2[h];
 		k++;
 	}
+	if (both == NULL)
+	{
+		return (NULL);
+	}
 	both[k] = '\0';
 	return (both);
+	free(both);
 }
 /**
  *_strlen - calculates the length of a string
