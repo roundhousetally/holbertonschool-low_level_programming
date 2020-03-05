@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 
 	combo = min + max + 1;
 
-	for (i = min; i < combo; i++)
+	for (i = 0; i < combo; i++, min++)
 	{
 		arr[i] = i;
 	}
