@@ -27,11 +27,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	both = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	if (both == NULL)
-	{
-		return (NULL);
-	}
-
 	for (k = 0; s1[k] != '\0'; k++)
 	{
 		both[k] = s1[k];
