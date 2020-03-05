@@ -29,7 +29,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (both == NULL)
 	{
-		free(both);
 		return (NULL);
 	}
 
@@ -45,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	both[k] = '\0';
 	return (both);
-	free(both);
 }
 /**
  *_strlen - calculates the length of a string
