@@ -17,7 +17,8 @@ void print_all(const char * const format, ...)
 	if (format == NULL)
 		return;
 
-	while (format[i])
+	while (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+	       format[i] == 's')
 	{
 		switch (format[i])
 		{
@@ -45,7 +46,6 @@ void print_all(const char * const format, ...)
 		com = ", ";
 		i++;
 	}
-
 	printf("\n");
 	va_end(list);
 }
