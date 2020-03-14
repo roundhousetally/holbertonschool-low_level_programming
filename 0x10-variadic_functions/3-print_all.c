@@ -14,6 +14,9 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
+	if (format == NULL)
+		return;
+
 	while (format[i])
 	{
 		switch (format[i])
@@ -36,7 +39,8 @@ void print_all(const char * const format, ...)
 			printf("%s%s", com, temp);
 			break;
 		default:
-			break;
+			i++;
+			continue;
 		}
 		com = ", ";
 		i++;
