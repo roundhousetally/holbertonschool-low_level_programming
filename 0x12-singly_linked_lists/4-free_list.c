@@ -14,11 +14,15 @@ void free_list(list_t *head)
 	list_t *p = head;
 	list_t *temp = NULL;
 
+	if (head == NULL)
+		return;
 	while (p != NULL)
 	{
 		temp = p->next;
+		free(p->str);
 		free(p);
 		p = temp;
 	}
+	free(p->str);
 	free(temp);
 }
