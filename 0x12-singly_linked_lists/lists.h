@@ -36,5 +36,5 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 /** 5 */
-void strtup (void) __attribute__((constructor));
+void strtup(void) __attribute__((constructor));
 #endif
