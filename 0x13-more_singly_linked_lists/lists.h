@@ -49,11 +49,6 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
 /** 10 */
-int delete_nodeint_at_index(listint_t **head, unsgined int index);
-
-
-
-
-
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 #endif
