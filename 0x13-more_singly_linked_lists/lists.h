@@ -53,4 +53,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
 /** 11 */
 listint_t *reverse_listint(listint_t **head);
+
+/** 12 */
+size_t print_listint_safe(const listint_t *head);
+
+/** 14 */
+listint_t *find_listint_loop(listint_t *head);
 #endif
