@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * clear_bit - resets value of a bit to 1
+ * clear_bit - resets value of a bit to 0
  * @n: pointer to long number
  * @index: index
  * Return: 1 on success, -1 on error
