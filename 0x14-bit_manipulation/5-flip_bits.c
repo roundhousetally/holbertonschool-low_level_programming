@@ -3,30 +3,20 @@
 /**
  * flip_bits- counts the amount of bits needed to flip
  * @n: first number
- * m: second number
+ * @m: second number
  * Return: the number of bits needed to flip
  */
 
-int countbits(int n);
-
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	return (countbits(n ^ m));
-}
+	unsigned long int b, count = 0;
 
-/**
- * countbits- counts the flipped bits
- * @n: incoming number
- * Return: count of flipped bits
- */
-int countbits(int n)
-{
-	unsigned long int count = 0;
+	b = (n ^ m);
 
-	while (n)
+	while (b)
 	{
-		count += n & 1;
-		n >>= 1;
+		count += b & 1;
+		b >>= 1;
 	}
 	return (count);
 }
