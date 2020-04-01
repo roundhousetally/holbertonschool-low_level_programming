@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 
-	int file_from, file_to, rd, wrt;
+	int file_from, file_to, rd, wrt = 1;
 	char buffer[1024];
 
 	if (argc != 3)
