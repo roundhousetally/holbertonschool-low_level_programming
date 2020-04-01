@@ -37,6 +37,10 @@ int main(int argc, char *argv[])
 		if (wrt == -1 || rd != wrt)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				argv[2]), exit(99);
+		rd = read(file_from, buffer, 1024);
+		if (rd == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n",
+				argv[1]), exit(98);
 	}
 	wrt = close(file_from);
 	if (wrt == -1)
