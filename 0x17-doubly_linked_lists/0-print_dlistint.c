@@ -9,25 +9,27 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
+	const dlistint_t *temp;
 	size_t i = 0;
 
+	temp = h;
 	if (h == NULL)
 	{
 		return (0);
 	}
 
-	while (h != NULL)
+	while (temp != NULL)
 	{
-		if (h->next == NULL && h->prev == NULL)
+		if (temp->next == NULL && temp->prev == NULL)
 		{
 			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("%u\n", h->n);
+			printf("%u\n", temp->n);
 		}
 		i++;
-		h = h->next;
+		temp = temp->next;
 	}
 	return (i);
 }
