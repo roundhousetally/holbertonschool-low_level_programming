@@ -20,14 +20,7 @@ size_t print_dlistint(const dlistint_t *h)
 
 	while (temp != NULL)
 	{
-		if (temp->next == NULL && temp->prev == NULL)
-		{
-			printf("[0] (nil)\n");
-		}
-		else
-		{
-			printf("%u\n", temp->n);
-		}
+		printf("%u\n", temp->n);
 		i++;
 		temp = temp->next;
 	}
