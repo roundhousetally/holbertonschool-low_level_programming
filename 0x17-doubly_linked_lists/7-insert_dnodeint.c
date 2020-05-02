@@ -33,15 +33,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = nn;
 		return (*h);
 	}
-	while (next1 && i < (idx - 1))
+	while (i < (idx - 1))
 	{
+		if (next1 == NULL)
+		{
+			free(nn);
+			return (NULL);
+		}
 		next1 = next1->next;
 		i++;
-	}
-	if (next1 == NULL)
-	{
-		free(nn);
-		return (NULL);
 	}
 	temp = next1;
 	next1 = next1->next;
