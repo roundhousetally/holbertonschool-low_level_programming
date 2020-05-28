@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned int i;
 
 	/** if size too small, no table bby */
-	if(size < 1)
+	if (size < 1)
 	{
 		return (NULL);
 	}
@@ -24,9 +24,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	/** allocate for entries */
 	newtable->array = malloc(sizeof(hash_node_t *) * size);
-	if(newtable->array == NULL)
+	if (newtable->array == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	/** set table to NULL and return new table */
 	for (i = 0; i < size; i++)
