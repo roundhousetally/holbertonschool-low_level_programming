@@ -1,0 +1,32 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_print - prints a hash table
+ * @ht: hash table to print
+ * Return - prints the table
+ */
+
+void hash_table_print(const hash_table_t *ht)
+{
+	const hash_table_t *look;
+	unsigned int i = 0;
+	look = ht;
+
+	printf("{");
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht == NULL)
+		{
+			printf("{}");
+			continue;
+		}
+		while (look->array[i] != NULL)
+		{
+			printf("'%s': '%s'", look->array[i]->key, look->array[i]->value);
+			look->array[i] = ((look->array[i])->next);
+		}
+
+	}
+	printf("}");
+	printf("\n");
+}
