@@ -11,6 +11,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *look;
 	unsigned long int hk;
+
+	if (!ht || !key)
+		return (NULL);
+
 	/** hash the key */
 	hk = key_index((const unsigned char *)key, ht->size);
 	/** look for slot */
