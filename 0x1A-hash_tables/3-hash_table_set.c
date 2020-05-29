@@ -12,7 +12,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int hi, i;
 	char *vcopy;
 	hash_node_t *newn;
-
 	/** must have key or hash table */
 	if (!key || !ht)
 		return (0);
@@ -20,10 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hi = key_index((const unsigned char *)key, ht->size);
 	/** copying over value */
 	vcopy = strdup(value);
-
 	if (!vcopy)
 		return (0);
-
 	/** loop through hash table array */
 	for (i = hi; ht->array[i]; i++)
 	{/** search for matching key */
@@ -34,7 +31,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
-	/** malloc for new node */
 	newn = malloc(sizeof(hash_node_t));
 	if (!newn)
 	{
