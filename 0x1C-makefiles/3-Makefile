@@ -1,4 +1,3 @@
-# MakeFile
 SRC=main.c holberton.c
 CC=gcc
 OBJ=$(SRC:%.c=%.o)
